@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+:root {
+    --text-blue: #023165;
+    --button-blue: #1E55B7;
+}
+
+
+/* Reset styles start */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    /* overflow-x: hidden; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ebf3ff;
+}
+
+section {
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: var(--text-blue);
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 1.4em;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.blue {
+    padding: .7em 1.3em;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--button-blue);
+    color: #e6e6e6;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+
+/* Reset Styles end */
+
+
+/* Header Styles starts */
+
+header {
+    width: 100%;
+    height: 100vh;
+    color: #e6e6e6;
+    background: url(./assets/bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 10;
+    box-shadow: inset 120px 120px 200px rgba(0, 0, 0, 0.7), inset -120px -120px 200px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Nav Element Styles */
+
+nav {
+    width: 100%;
+    padding: 2em 4em 25vh 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h3 {
+    z-index: 100;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.burger {
+    z-index: 100;
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    right: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    cursor: pointer;
+}
+
+.burger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.6s ease;
+}
+
+.link {
+    z-index: 1000;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-links li {
+    margin-left: 2em;
+}
+
+.nav-links li a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: .6px;
+}
+
+.nav-links li a:hover {
+    color: #FEBB01;
+    transition: all 0.3s ease-in;
+}
+
+
+/* Header description styles starts */
+
+.head-content {
+    width: 100%;
+    padding: 0 4em 0 4em;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+
+.head-content *+* {
+    margin-top: 1.5em;
+}
+
+.head-content h1 {
+    font-size: 3.5em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.head-content p {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 1.5em 15em 0 15em;
+}
+
+.buttons button {
+    padding: .9em 1.4em;
+    border-radius: 3px;
+    border: none;
+    color: #e6e6e6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 100;
+}
+
+.buttons .blue {
+    margin-right: 2em;
+}
+
+.buttons .trans {
+    background-color: transparent;
+    border: 1px solid #e6e6e6;
+}
+
+button:hover,
+.row img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+
+/* header img {
+    z-index: 100;
+    width: 5em;
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: pulse 1s infinite;
+} */
+
+i {
+    color: var(--text-blue);
+    font-size: 1.2em;
+    display: inline-block;
+    padding: .6em .9em;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 100;
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+i::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(126, 126, 126, 0.5);
+    animation: pulse 1.25s infinite;
+}
+
+
+}
+header img:hover {
+    scale: 2;
+}
+
+/* Header styles end */
+
+/* Header button Animation start*/
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Header button Animation end */
+
+/* section styles start */
+.trust {
+    display: flex;
+    margin: 3em 5vw;
+    align-items: center;
+    justify-content: space-around;
+}
+.trust p {
+    width: 20%;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #7B7B7B;
+}
+.trust .comp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    margin-left: -10em;
+}
+.trust .comp img {
+    margin-left: 2em;
+    width: 6em;
+}
+
+/* What we do section */
+#what-we-do {
+    margin-top: 30vh;
+    text-align: center;
+}
+#what-we-do *+* {
+    margin-top: 1em;
+}
+.services {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 1em;
+}
+.box {
+    width: fit-content;
+    margin: auto;
+    height: fit-content;
+    padding: 2em;
+    text-align: center;
+    background-color: #E3EBFA;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.box img {
+    width: 3em;
+}
+.box h5 {
+    font-size: 1em;
+}
+
+/* Security section styles */
+#d-security {
+    margin-top: 30vh;
+    margin-bottom: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#d-security img {
+    width: 50%;
+}
+.desc {
+    margin-left: 7vw;
+}
+.desc *+* {
+    margin-top: 1em;
+}
+.desc h3 {
+    font-size: 2em;
+}
+
+/* Speedify Data plans start */
+#data-plans {
+    text-align: center;
+    margin-bottom: 20vh;
+}
+.plans {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+.sbox {
+    margin: auto;
+    height: fit-content;
+    padding: 2em;
+    text-align: center;
+    background-color: #E3EBFA;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.sbox *+* {
+    margin-top: 1em;
+}
+.blue {
+    font-weight: 800;
+    font-size: .9em;
+}
+.sbox h1 {
+    font-size: 2.6em;
+    margin-top: .5em;
+    color: #030D42;
+}
+.price {
+    color: rgb(26, 26, 26);
+}
+.price p {
+    font-weight: 800;
+}
+.price small {
+    font-size: .75em;
+}
+.bund {
+    min-width: 300px;
+    margin: auto;
+}
+.btn .tab {
+    padding: 1em 1.3em;
+}
+
+/* Speedify Data plans ends */
+
+/* 5G Styles start */
+.first,
+.sec {
+    margin-top: 18vh;
+    margin-bottom: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.first img,
+.sec img {
+    width: 50%;
+}
+.desc h1 {
+    font-size: 3em;
+}
+.desc .blue {
+    display: block;
+    margin-top: 2em;
+}
+
+/* 5G Styles end */
+
+/* section styles end */
+
+/* Footer styles starts */
+footer {
+    width: 100%;
+    padding: 4em 5vw 2em 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: #212744;
+    color: #e6e6e6;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+}
+.foot h4 {
+    font-size: 1.1em;
+    letter-spacing: .8px;
+    color: #ebf3ff;
+}
+.row-1 {
+    width: 25%;
+}
+.row-1 p {
+    margin-top: 1.3em;
+    font-size: .9em;
+    color: #889AB4;
+}
+.row-2 li {
+    list-style-type: none;
+    margin-top: .4em;
+}
+.row-2 h4 {
+    margin-bottom: 1.3em;
+}
+.row-2 li a {
+    color: #889AB4;
+    text-decoration: none;
+    font-size: .9em;
+}
+.row-3 {
+    width: 30%;
+    margin-left: 10vw;
+}
+.row-3 h4 {
+    margin-bottom: 1.3em;
+}
+.row-3 p {
+    font-size: .9em;
+}
+.row-3 .para *+* {
+    margin-top: 1em;
+}
+.row-3 .para {
+    color: #889AB4;
+}
+.row-4 {
+    margin-top: 9vh;
+}
+.row-4 img {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 1.8em;
+}
+.copy {
+    display: block;
+    text-align: center;
+    margin-top: 6em;
+    color: #889AB4;
+}
+
+/* Footer styles ends */
+
+/* Tablet screen ranges */
+@media screen and (max-width: 768px) {
+    nav h3 {
+        font-size: .9em;
+    }
+    
+    .nav-links li {
+        margin-left: 1.3em;
+    }
+    
+    .nav-links li a {
+        font-size: .6em;
+    }
+    
+    .head-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .head-content p {
+        margin: 1.5em 4em 0 4em;
+        font-size: .8em;
+    }
+    
+    .trust p {
+        font-size: 1.1em;
+    }
+    
+    .buttons {
+        margin-top: .8em;
+    }
+    
+    .trust .comp img {
+        width: 5em;
+    }
+    
+    .tab {
+        font-size: .6em;
+    }
+    
+    .trust {
+        margin: 2em 0;
+    }
+    
+    .trust p {
+        font-size: .9em;
+    }
+    
+    .comp {
+        width: 70%;
+    }
+    
+    .trust .comp img {
+        margin-left: 1em;
+        width: 4em;
+    }
+    
+    .services {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+        margin-top: 2e;
+    }
+    
+    #d-security {
+        flex-direction: column;
+    }
+    
+    #d-security img {
+        width: 500px;
+        margin: auto;
+    }
+    
+    #d-security .desc {
+        margin-top: 5em;
+        margin-left: 0;
+    }
+    
+    .desc h3 {
+        font-size: 1.6em;
+    }
+    
+    .plans {
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    
+    .sbox {
+        width: 70%;
+    }
+    
+    .bund {
+        min-width: unset;
+    }
+    
+    .btn {
+        margin-bottom: 12em;
+    }
+    
+    .first,
+    .sec {
+        flex-direction: column;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    
+    .sec img {
+        width: 500px;
+    }
+    
+    .first img {
+        width: 450px;
+    }
+    
+    .first .desc {
+        margin-top: 4em;
+    }
+    
+    .sec {
+        flex-flow: column-reverse;
+    }
+    
+    .desc h1 {
+        font-size: 2.2em;
+    }
+    
+    .foot {
+        flex-wrap: wrap;
+    }
+    
+    .row {
+        flex: 0 1 40%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .row-3 {
+        margin-left: 0;
+    }
+    
+    .row-1,
+    .row-2 {
+        margin-bottom: 10vh;
+    }
+}
+@media screen and (max-width: 560px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    p {
+        font-size: ;
+    }
+    
+    .burger {
+        display: flex;
+        z-index: 10000;
+    }
+    
+    .link {
+        z-index: 1000;
+    }
+    
+    .nav-links {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 50%;
+        background-color: rgba(2, 2, 22, 0.966);
+        padding: 4em 2em 2em;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        margin: 1em;
+        opacity: 0;
+    }
+    
+    .nav-links li a {
+        font-size: .7em;
+    }
+    
+    .head-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .head-content p {
+        width: 100%;
+        margin: 1em auto;
+    }
+    
+    i {
+        font-size: .9em;
+    }
+    
+    .trust {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .trust p {
+        width: 100%;
+        margin: 1em auto;
+        text-align: center;
+    }
+    
+    .trust .comp {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+        margin-left: 5.5em;
+    }
+    
+    .box img {
+        width: 2.4em;
+    }
+    
+    #d-security img {
+        width: 380px;
+        margin: auto;
+    }
+    
+    .sbox h1 {
+        font-size: 2.3em;
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    .first img,
+    .sec img {
+        width: 380px;
+        margin: auto;
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px)
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px)
+    }
+}
