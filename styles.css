@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
-    /* overflow-x: hidden; */
 }
 
 html {
@@ -25,8 +24,7 @@ body {
 
 section {
     width: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 0 5vw;
     color: var(--text-blue);
 }
 
@@ -97,8 +95,8 @@ nav h3 {
 
 .burger {
     z-index: 100;
-    width: 30px;
-    height: 24px;
+    width: 20px;
+    height: 18px;
     position: absolute;
     right: 3em;
     display: flex;
@@ -195,18 +193,6 @@ button:hover,
     transition: all 0.4s;
 }
 
-
-/* header img {
-    z-index: 100;
-    width: 5em;
-    position: absolute;
-    bottom: 2em;
-    left: 50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    animation: pulse 1s infinite;
-} */
-
 i {
     color: var(--text-blue);
     font-size: 1.2em;
@@ -244,7 +230,7 @@ header img:hover {
 
 /* Header styles end */
 
-/* Header button Animation start*/
+/* Header button Animation */
 @keyframes pulse {
     0% {
         transform: scale(0.95);
@@ -257,36 +243,32 @@ header img:hover {
     }
 }
 
-/* Header button Animation end */
+/* Header button Animation */
 
 /* section styles start */
 .trust {
+    width: 90%;
+    margin: 4em auto;
     display: flex;
-    margin: 3em 5vw;
     align-items: center;
-    justify-content: space-around;
 }
 .trust p {
-    width: 20%;
     font-size: 1.2em;
     font-weight: 600;
     color: #7B7B7B;
 }
 .trust .comp {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    margin-left: -10em;
+    margin-left: 2em;
 }
 .trust .comp img {
     margin-left: 2em;
     width: 6em;
+    vertical-align: middle;
 }
 
 /* What we do section */
 #what-we-do {
-    margin-top: 30vh;
+    margin-top: 20vh;
     text-align: center;
 }
 #what-we-do *+* {
@@ -326,6 +308,7 @@ header img:hover {
 }
 #d-security img {
     width: 50%;
+    margin: auto;
 }
 .desc {
     margin-left: 7vw;
@@ -344,8 +327,7 @@ header img:hover {
 }
 .plans {
     width: 85%;
-    margin: auto;
-    margin-bottom: 2em;
+    margin: 2em auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
@@ -393,8 +375,8 @@ header img:hover {
 /* 5G Styles start */
 .first,
 .sec {
-    margin-top: 18vh;
-    margin-bottom: 20vh;
+    width: 100%;
+    margin: 19vh auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -402,6 +384,7 @@ header img:hover {
 .first img,
 .sec img {
     width: 50%;
+    margin: auto;
 }
 .desc h1 {
     font-size: 3em;
@@ -487,7 +470,7 @@ footer {
 /* Footer styles ends */
 
 /* Tablet screen ranges */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
     nav h3 {
         font-size: .9em;
     }
@@ -509,37 +492,25 @@ footer {
         font-size: .8em;
     }
     
-    .trust p {
-        font-size: 1.1em;
-    }
-    
     .buttons {
         margin-top: .8em;
     }
     
+    .trust p {
+        font-size: 1em;
+    }
+    
+    .trust .comp {
+        margin-left: 1em;
+    }
+    
     .trust .comp img {
         width: 5em;
+        margin: .3em;
     }
     
     .tab {
         font-size: .6em;
-    }
-    
-    .trust {
-        margin: 2em 0;
-    }
-    
-    .trust p {
-        font-size: .9em;
-    }
-    
-    .comp {
-        width: 70%;
-    }
-    
-    .trust .comp img {
-        margin-left: 1em;
-        width: 4em;
     }
     
     .services {
@@ -550,6 +521,7 @@ footer {
     
     #d-security {
         flex-direction: column;
+        align-items: center;
     }
     
     #d-security img {
@@ -586,16 +558,17 @@ footer {
     .first,
     .sec {
         flex-direction: column;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+        margin: 10vh auto;
     }
     
     .sec img {
         width: 500px;
+        margin: auto;
     }
     
     .first img {
         width: 450px;
+        margin: auto;
     }
     
     .first .desc {
@@ -638,6 +611,14 @@ footer {
         font-size: ;
     }
     
+    nav {
+        padding: 2em;
+    }
+    
+    .head-content {
+        margin-top: 15vh;
+    }
+    
     .burger {
         display: flex;
         z-index: 10000;
@@ -677,26 +658,24 @@ footer {
         margin: 1em auto;
     }
     
+    .head-content button {
+        padding: .8em 1em;
+    }
+    
     i {
         font-size: .9em;
     }
     
     .trust {
         flex-direction: column;
-        align-items: center;
     }
     
     .trust p {
-        width: 100%;
-        margin: 1em auto;
-        text-align: center;
+        margin: 1em;
     }
     
-    .trust .comp {
-        width: 80%;
-        margin: 0;
-        text-align: center;
-        margin-left: 5.5em;
+    .trust .comp img {
+        width: 4em;
     }
     
     .box img {
@@ -704,8 +683,8 @@ footer {
     }
     
     #d-security img {
-        width: 380px;
-        margin: auto;
+        width: 100%;
+        margin-left: 1em;
     }
     
     .sbox h1 {
@@ -718,8 +697,12 @@ footer {
     
     .first img,
     .sec img {
-        width: 380px;
+        width: 100%;
         margin: auto;
+    }
+    
+    footer {
+        padding: 4em 0 2em 2em;
     }
     
     @keyframes navLinkFade {
@@ -734,7 +717,7 @@ footer {
     }
     
     .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px)
+        transform: rotate(-45deg) translate(-6px, 2.5px)
     }
     
     .toggle .line2 {
@@ -742,6 +725,6 @@ footer {
     }
     
     .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px)
+        transform: rotate(45deg) translate(-6px, -2.5px)
     }
 }
