@@ -497,7 +497,7 @@ footer {
     }
     
     .trust p {
-        font-size: 1em;
+        font-size: 1.5em;
     }
     
     .trust .comp {
@@ -617,6 +617,11 @@ footer {
     
     .head-content {
         margin-top: 15vh;
+        padding: 1.5em;
+    }
+    
+    i {
+        bottom: 2em;
     }
     
     .burger {
@@ -671,6 +676,7 @@ footer {
     }
     
     .trust p {
+        font-size: ;
         margin: 1em;
     }
     
@@ -703,6 +709,14 @@ footer {
     
     footer {
         padding: 4em 0 2em 2em;
+    }
+    
+    .foot {
+        display: block;
+    }
+    
+    .row {
+        width: 100%;
     }
     
     @keyframes navLinkFade {
