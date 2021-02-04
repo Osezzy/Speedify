@@ -717,6 +717,7 @@ footer {
     
     .row {
         width: 100%;
+        padding-right: 2em;
     }
     
     @keyframes navLinkFade {
